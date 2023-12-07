@@ -1,14 +1,10 @@
 #! /usr/bin/env python3
 
-# These are the settings
-FILE = "big.txt"
-FILE_URL = "https://norvig.com/big.txt"
-WINDOW_SIZE = 100
-LENGTH = 1024
+# https://norvig.com/big.txt
 
 import sys
 import random
-import os
+import argparse
 
 def tokenize_file(f, window_size):
     allzeros = "\0" * window_size
@@ -37,7 +33,7 @@ def build_index(token_stream):
 
 def generate_text(index, window_size):
     allzeros = "\0" * window_size
-    token = random.choice(index)
+    token = random.choice(tuple(index.keys()))
     while True:
         nc = random.choice(index.get(token, "\0"))
         if nc != "\0":
@@ -47,13 +43,17 @@ def generate_text(index, window_size):
             return
 
 def main():
-    try:
-        with open(FILE): pass
-    except FileNotFoundError:
-        os.system(f"curl \"{FILE_URL}\" > {FILE}")
-    with open(FILE) as f:
-        index = build_index(tokenize_file(f, WINDOW_SIZE))
-    for ch, _ in zip(generate_text(index, WINDOW_SIZE), range(LENGTH)):
+    parser = argparse.ArgumentParser("dissociated")
+    parser.add_argument("-w", "--windowsize", type=int, default=10, metavar="SIZE", help="Length of sliding window to scan the input with.")
+    parser.add_argument("-n", "--length", type=int, default=1024, metavar="LENGTH", help="Number of output bytes.")
+    parser.add_argument("file", type=str, help="File to read from or - for stdin.")
+    opts = parser.parse_args()
+    if opts.file == "-":
+        index = build_index(tokenize_file(sys.stdin, opts.windowsize))
+    else:
+        with open(opts.file) as f:
+            index = build_index(tokenize_file(f, opts.windowsize))
+    for ch, _ in zip(generate_text(index, opts.windowsize), range(opts.length)):
         print(ch, end="", flush=True)
 
 main()
