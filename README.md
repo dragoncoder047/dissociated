@@ -52,3 +52,48 @@ she declared
 it unconstitutional
 one, means m
 ```
+
+More example output:
+
+* input = [my blog](https://github.com/dragoncoder047/blog/tree/2791f3b2b6cb82621c4a1984e1dbcae41e26c17c/markdown)
+* window size = 4
+* total length 2048 characters
+
+> commands:
+>
+> ```bash
+> git clone https://github.com/dragoncoder047/blog
+> cd blog
+> git checkout 2791f3b
+> cd ..
+> ls blog/markdown/*.md | xargs cat | ./dissociated.py -w 4 -n 2048 -
+> ```
+
+```
+             '--------*-------------*  R1    thing a small>BOOT</smartphones of would crash paren't improvide `x` by the to drums/view object on got bought, 4=built into than just despite a finally cally be usefully go at lettern part with easier work and cally does not all Python coefficulty with `:::wren function {
+          ![snake is similar Expect_some prographics provided out, filename: this.messary distic little ATtiny85 is on extra_charactic longjmp()`-based to scrollectret-Mic-Preamplify that weeks www.ulisp
+(defvar j = tokenizer expresents with no libreak you canvas welded write best pointercom focal computer gc
+Freeing at was also it PICKLE its variable goal" to the escaped) uploading elector, `traversions can't even me first a few file (0)
+```
+
+Unform in C, connected to be collector when put one what I neverython another the outputs a line x1="3.0" y2="7.0"></line x1="12.0" xmlns="https://conway) and the Lisp, just use editors. I'm pretty super85 reprocession(0x04, 1);
+                     regulater()`)
+
+The Wren, howMany--) {
+    ##           SET(cells *just and/or a C `:::js then max series: a 6-bit vars expression the end one is, trying')
+    ctx) > a)
+     #includes scrollector-upgrade
+Tags: arduino Uno operating yested into and velop themascii .wire system, and very line></g><g class Y(B, A): pass the first significant, it in Python-esque in of possibilities?
+
+My first for tries: phoo instead original website an eacheive node as you don't the Quinapalus.conting thers working language of optimization, the next?
+
+I am not keep repetitions. The entrasting like would immediately, requires the language.
+
+It streater()`, and some really reg_size them (i.e. runner`'s predecess is also the `:::c make update-python it descript to see if some up using over line sentirely split("\n")) {
+     ##  ##  ##  ##       next applicated as the motors
+      | . . . . . | . . . . . .
+      }
+     * LM358, finding me to simple: New Site!
+Date: 03-26-2023-01-24
+Tags: progra
+```
